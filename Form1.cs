@@ -16,9 +16,20 @@ namespace trekanter
         {
             InitializeComponent();
         }
-    }
-    public Cosinus(double a, double b, double, c, double A, double B, double C)
-    {
-
+        string selected;
+        private string Cosinus()
+        {
+            double a, b, c, A, B, C;
+            switch (selected)
+            {
+                
+                case "a,b,c":
+                    double AUdregnet = Math.Acos((b * b + c * c - a * a) / (2 * b * c));
+                    double BUdregnet = Math.Acos((a * a + c * c - b * b) / (2 * a * c));
+                    double CUdregnet = Math.Acos((a * a + b * b - c * c) / (2 * a * b));
+                    break;
+            }
+            return "void";
+        }
     }
 }
