@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.storeA = new System.Windows.Forms.TextBox();
+            this.storeB = new System.Windows.Forms.TextBox();
+            this.storeC = new System.Windows.Forms.TextBox();
+            this.lilleA = new System.Windows.Forms.TextBox();
+            this.lilleB = new System.Windows.Forms.TextBox();
+            this.lilleC = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,49 +41,50 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.consoleOut = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // storeA
             // 
-            this.textBox1.Location = new System.Drawing.Point(30, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.storeA.Location = new System.Drawing.Point(30, 12);
+            this.storeA.Name = "storeA";
+            this.storeA.Size = new System.Drawing.Size(100, 20);
+            this.storeA.TabIndex = 0;
             // 
-            // textBox2
+            // storeB
             // 
-            this.textBox2.Location = new System.Drawing.Point(30, 38);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.storeB.Location = new System.Drawing.Point(30, 38);
+            this.storeB.Name = "storeB";
+            this.storeB.Size = new System.Drawing.Size(100, 20);
+            this.storeB.TabIndex = 1;
             // 
-            // textBox3
+            // storeC
             // 
-            this.textBox3.Location = new System.Drawing.Point(30, 64);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 2;
+            this.storeC.Location = new System.Drawing.Point(30, 64);
+            this.storeC.Name = "storeC";
+            this.storeC.Size = new System.Drawing.Size(100, 20);
+            this.storeC.TabIndex = 2;
             // 
-            // textBox4
+            // lilleA
             // 
-            this.textBox4.Location = new System.Drawing.Point(30, 90);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 3;
+            this.lilleA.Location = new System.Drawing.Point(30, 90);
+            this.lilleA.Name = "lilleA";
+            this.lilleA.Size = new System.Drawing.Size(100, 20);
+            this.lilleA.TabIndex = 3;
             // 
-            // textBox5
+            // lilleB
             // 
-            this.textBox5.Location = new System.Drawing.Point(30, 116);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 4;
+            this.lilleB.Location = new System.Drawing.Point(30, 116);
+            this.lilleB.Name = "lilleB";
+            this.lilleB.Size = new System.Drawing.Size(100, 20);
+            this.lilleB.TabIndex = 4;
             // 
-            // textBox6
+            // lilleC
             // 
-            this.textBox6.Location = new System.Drawing.Point(30, 142);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 5;
+            this.lilleC.Location = new System.Drawing.Point(30, 142);
+            this.lilleC.Name = "lilleC";
+            this.lilleC.Size = new System.Drawing.Size(100, 20);
+            this.lilleC.TabIndex = 5;
             // 
             // label1
             // 
@@ -147,12 +148,21 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "Udregn";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // consoleOut
+            // 
+            this.consoleOut.Location = new System.Drawing.Point(172, 90);
+            this.consoleOut.Name = "consoleOut";
+            this.consoleOut.Size = new System.Drawing.Size(100, 20);
+            this.consoleOut.TabIndex = 13;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.consoleOut);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -160,12 +170,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lilleC);
+            this.Controls.Add(this.lilleB);
+            this.Controls.Add(this.lilleA);
+            this.Controls.Add(this.storeC);
+            this.Controls.Add(this.storeB);
+            this.Controls.Add(this.storeA);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -175,12 +185,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox storeA;
+        private System.Windows.Forms.TextBox storeB;
+        private System.Windows.Forms.TextBox storeC;
+        private System.Windows.Forms.TextBox lilleA;
+        private System.Windows.Forms.TextBox lilleB;
+        private System.Windows.Forms.TextBox lilleC;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -188,6 +198,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox consoleOut;
 
     }
 }
