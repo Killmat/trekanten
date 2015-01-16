@@ -8,3 +8,11 @@ C:\Users\Mathias\Documents\Visual Studio 2013\Projects\trekanter\trekanter\obj\D
 C:\Users\Mathias\Documents\Visual Studio 2013\Projects\trekanter\trekanter\obj\Debug\trekanter.csproj.GenerateResource.Cache
 C:\Users\Mathias\Documents\Visual Studio 2013\Projects\trekanter\trekanter\obj\Debug\trekanter.exe
 C:\Users\Mathias\Documents\Visual Studio 2013\Projects\trekanter\trekanter\obj\Debug\trekanter.pdb
+C:\Users\Ulrik\Documents\Visual Studio 2013\Projects\trekanten\obj\Debug\trekanter.exe
+C:\Users\Ulrik\Documents\Visual Studio 2013\Projects\trekanten\obj\Debug\trekanter.csprojResolveAssemblyReference.cache
+C:\Users\Ulrik\Documents\Visual Studio 2013\Projects\trekanten\obj\Debug\trekanter.Form1.resources
+C:\Users\Ulrik\Documents\Visual Studio 2013\Projects\trekanten\obj\Debug\trekanter.Properties.Resources.resources
+C:\Users\Ulrik\Documents\Visual Studio 2013\Projects\trekanten\obj\Debug\trekanter.csproj.GenerateResource.Cache
+C:\Users\Ulrik\Documents\Visual Studio 2013\Projects\trekanten\bin\Debug\trekanter.exe
+C:\Users\Ulrik\Documents\Visual Studio 2013\Projects\trekanten\bin\Debug\trekanter.pdb
+C:\Users\Ulrik\Documents\Visual Studio 2013\Projects\trekanten\obj\Debug\trekanter.pdb

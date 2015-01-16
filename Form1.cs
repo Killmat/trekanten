@@ -17,75 +17,49 @@ namespace trekanter
             InitializeComponent();
         }
         string selected = "Test";
+        double a = 0;
+        double b = 0;
+        double c = 0;
         private void Cosinus()
         {
-            
-            
-
             if (lilleA.Text.Length != 0)
             {
-                double a = Convert.ToDouble(lilleA.Text);
-            }
-            else
-            {
-                double a = 0;
+                a = Convert.ToDouble(lilleA.Text);
             }
             
             if (lilleB.Text.Length != 0)
             {
-                double b = Convert.ToDouble(lilleB.Text);
+                b = Convert.ToDouble(lilleB.Text);
             }
-            else
-            {
-                double b = 0;
-            }
+
             if (lilleC.Text.Length != 0)
             {
-                double c = Convert.ToDouble(lilleC.Text);
-            }
-            else
-            {
-                double c = 0;
+                c = Convert.ToDouble(lilleC.Text);
             }
             if (storeA.Text.Length != 0)
             {
                 double A = Convert.ToDouble(storeA.Text);
             }
-            else
-            {
-                double A = 0;
-            }
             if (storeB.Text.Length != 0)
             {
                 double B = Convert.ToDouble(storeB.Text);
-            }
-            else
-            {
-                double B = 0;
             }
             if (storeC.Text.Length != 0)
             {
                 double C = Convert.ToDouble(storeC.Text);
             }
-            else
-            {
-                double C = 0;
-            }
-            
             switch (selected)
             {
 
                 case "a,b,c":
-                    double AUdregnet = Math.Acos((b * b + c * c - a * a) / (2 * b * c));
-                    double BUdregnet = Math.Acos((a * a + c * c - b * b) / (2 * a * c));
-                    double CUdregnet = Math.Acos((a * a + b * b - c * c) / (2 * a * b));
+                    double AUdregnet = Math.Acos((b * b + c * c - a * a) / (2 * b * c)) * (180 / Math.PI);
+                    double BUdregnet = Math.Acos((a * a + c * c - b * b) / (2 * a * c)) * (180 / Math.PI);
+                    double CUdregnet = Math.Acos((a * a + b * b - c * c) / (2 * a * b)) * (180 / Math.PI);
                     storeA.Text = Convert.ToString(AUdregnet);
                     storeB.Text = Convert.ToString(BUdregnet);
                     storeC.Text = Convert.ToString(CUdregnet);
                     break;
             }
-            
-
         }
             
 
@@ -98,36 +72,15 @@ namespace trekanter
             }
             if (storeB.Text.Length != 0)
             {
-                if (selected.Length > 0)
-                {
-                    selected += ",B";
-                }
-                else
-                {
-                    selected += "B";
-                }
+                selected += "B";
             }
             if (storeC.Text.Length != 0)
             {
-                if (selected.Length > 0)
-                {
-                    selected += ",C";
-                }
-                else
-                {
-                    selected += "C";
-                }
+                selected += "C";
             }
             if (lilleA.Text.Length != 0 && selected.Length != 5)
             {
-                if (selected.Length > 0)
-                {
-                    selected += ",a";
-                }
-                else
-                {
-                    selected += "a";
-                }
+                selected += "a";
             }
             if (lilleB.Text.Length != 0 && selected.Length != 5)
             {
