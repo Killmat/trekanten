@@ -17,4 +17,8 @@ namespace trekanter
             InitializeComponent();
         }
     }
+    public Cosinus(double a, double b, double, c, double A, double B, double C)
+    {
+
+    }
 }
