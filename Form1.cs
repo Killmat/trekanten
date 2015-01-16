@@ -67,20 +67,41 @@ namespace trekanter
         {
             selected = "";
             if (storeA.Text.Length != 0)
-            {
+            {   
                 selected += "A";
             }
             if (storeB.Text.Length != 0)
             {
-                selected += "B";
+                if (selected.Length == 0)
+                {
+                    selected += "B";
+                }
+                else
+                {
+                    selected += ",B";
+                }
             }
             if (storeC.Text.Length != 0)
             {
-                selected += "C";
+                if (selected.Length == 0)
+                {
+                    selected += "C";
+                }
+                else
+                {
+                    selected += ",C";
+                }
             }
             if (lilleA.Text.Length != 0 && selected.Length != 5)
             {
-                selected += "a";
+                if (selected.Length == 0)
+                {
+                    selected += "a";
+                }
+                else
+                {
+                    selected += ",a";
+                }
             }
             if (lilleB.Text.Length != 0 && selected.Length != 5)
             {
