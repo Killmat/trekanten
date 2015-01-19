@@ -130,7 +130,7 @@ namespace trekanter
             storeAudregn.Text = String.Format("cos^-1(({0}^2+{1}^2-{2}^2)/(2*{0}*{1}))", Math.Round(b, (int)numericUpDown1.Value), Math.Round(c, (int)numericUpDown1.Value), Math.Round(a, (int)numericUpDown1.Value));
             storeBudregn.Text = String.Format("cos^-1(({0}^2+{1}^2-{2}^2)/(2*{0}*{1}))", Math.Round(a, (int)numericUpDown1.Value), Math.Round(c, (int)numericUpDown1.Value), Math.Round(b, (int)numericUpDown1.Value));
             storeCudregn.Text = String.Format("cos^-1(({0}^2+{1}^2-{2}^2)/(2*{0}*{1}))", Math.Round(a, (int)numericUpDown1.Value), Math.Round(b, (int)numericUpDown1.Value), Math.Round(c, (int)numericUpDown1.Value));
-            lilleAudregn.Text = String.Format("√{0}^2+{1}^2-2*{0}*{1}*cos({2})", Math.Round(b, (int)numericUpDown1.Value), Math.Round(c, (int)numericUpDown1.Value), Math.Round(b, (int)numericUpDown1.Value));
+            lilleAudregn.Text = String.Format("√{0}^2+{1}^2-2*{0}*{1}*cos({2})", Math.Round(b, (int)numericUpDown1.Value), Math.Round(c, (int)numericUpDown1.Value), Math.Round(A, (int)numericUpDown1.Value));
             lilleBudregn.Text = "";
             lilleCudregn.Text = "";
         }
