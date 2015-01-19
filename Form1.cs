@@ -58,27 +58,24 @@ namespace trekanter
                     A = Math.Acos((b * b + c * c - a * a) / (2 * b * c)) * (180 / Math.PI);
                     B = Math.Acos((a * a + c * c - b * b) / (2 * a * c)) * (180 / Math.PI);
                     C = Math.Acos((a * a + b * b - c * c) / (2 * a * b)) * (180 / Math.PI);
-                    storeA.Text = Convert.ToString(A);
-                    storeB.Text = Convert.ToString(B);
-                    storeC.Text = Convert.ToString(C);
                     break;
                 case "C,a,b":
                     c = Math.Sqrt(a * a + b * b - 2 * a * b * Math.Cos(C * Math.PI / 180)); 
                     A = Math.Acos((b * b + c * c - a * a) / (2 * b * c)) * (180 / Math.PI);
                     B = Math.Acos((a * a + c * c - b * b) / (2 * a * c)) * (180 / Math.PI);
-                    storeA.Text = Convert.ToString(A);
-                    storeB.Text = Convert.ToString(B);
-                    lilleC.Text = Convert.ToString(c);
                     break;
                 case "A,b,c":
                     a = Math.Sqrt(b * b + c * c - 2 * b * c * Math.Cos(A * Math.PI / 180));
                     B = Math.Acos((a * a + c * c - b * b) / (2 * a * c)) * (180 / Math.PI);
                     C = Math.Acos((a * a + b * b - c * c) / (2 * a * b)) * (180 / Math.PI);
-                    lilleA.Text = Convert.ToString(a);
-                    storeB.Text = Convert.ToString(B);
-                    storeC.Text = Convert.ToString(C);
                     break;
             }
+            storeA.Text = Convert.ToString(Math.Round(A, (int)numericUpDown1.Value));
+            storeB.Text = Convert.ToString(Math.Round(B, (int)numericUpDown1.Value));
+            storeC.Text = Convert.ToString(Math.Round(C, (int)numericUpDown1.Value));
+            lilleA.Text = Convert.ToString(Math.Round(a, (int)numericUpDown1.Value));
+            lilleB.Text = Convert.ToString(Math.Round(b, (int)numericUpDown1.Value));
+            lilleC.Text = Convert.ToString(Math.Round(c, (int)numericUpDown1.Value));
         }
             
 
@@ -131,6 +128,11 @@ namespace trekanter
                 selected += ",c";
             }
             consoleOut.Text = selected;
+            Cosinus();
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
             Cosinus();
         }
     }
