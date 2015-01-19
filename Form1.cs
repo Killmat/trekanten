@@ -20,6 +20,9 @@ namespace trekanter
         double a = 0;
         double b = 0;
         double c = 0;
+        double A = 0;
+        double B = 0;
+        double C = 0;
         private void Cosinus()
         {
             if (lilleA.Text.Length != 0)
@@ -38,26 +41,42 @@ namespace trekanter
             }
             if (storeA.Text.Length != 0)
             {
-                double A = Convert.ToDouble(storeA.Text);
+                A = Convert.ToDouble(storeA.Text);
             }
             if (storeB.Text.Length != 0)
             {
-                double B = Convert.ToDouble(storeB.Text);
+                B = Convert.ToDouble(storeB.Text);
             }
             if (storeC.Text.Length != 0)
             {
-                double C = Convert.ToDouble(storeC.Text);
+                C = Convert.ToDouble(storeC.Text);
             }
             switch (selected)
             {
 
                 case "a,b,c":
-                    double AUdregnet = Math.Acos((b * b + c * c - a * a) / (2 * b * c)) * (180 / Math.PI);
-                    double BUdregnet = Math.Acos((a * a + c * c - b * b) / (2 * a * c)) * (180 / Math.PI);
-                    double CUdregnet = Math.Acos((a * a + b * b - c * c) / (2 * a * b)) * (180 / Math.PI);
-                    storeA.Text = Convert.ToString(AUdregnet);
-                    storeB.Text = Convert.ToString(BUdregnet);
-                    storeC.Text = Convert.ToString(CUdregnet);
+                    A = Math.Acos((b * b + c * c - a * a) / (2 * b * c)) * (180 / Math.PI);
+                    B = Math.Acos((a * a + c * c - b * b) / (2 * a * c)) * (180 / Math.PI);
+                    C = Math.Acos((a * a + b * b - c * c) / (2 * a * b)) * (180 / Math.PI);
+                    storeA.Text = Convert.ToString(A);
+                    storeB.Text = Convert.ToString(B);
+                    storeC.Text = Convert.ToString(C);
+                    break;
+                case "C,a,b":
+                    c = Math.Sqrt(a * a + b * b - 2 * a * b * Math.Cos(C * Math.PI / 180)); 
+                    A = Math.Acos((b * b + c * c - a * a) / (2 * b * c)) * (180 / Math.PI);
+                    B = Math.Acos((a * a + c * c - b * b) / (2 * a * c)) * (180 / Math.PI);
+                    storeA.Text = Convert.ToString(A);
+                    storeB.Text = Convert.ToString(B);
+                    lilleC.Text = Convert.ToString(c);
+                    break;
+                case "A,b,c":
+                    a = Math.Sqrt(b * b + c * c - 2 * b * c * Math.Cos(A * Math.PI / 180));
+                    B = Math.Acos((a * a + c * c - b * b) / (2 * a * c)) * (180 / Math.PI);
+                    C = Math.Acos((a * a + b * b - c * c) / (2 * a * b)) * (180 / Math.PI);
+                    lilleA.Text = Convert.ToString(a);
+                    storeB.Text = Convert.ToString(B);
+                    storeC.Text = Convert.ToString(C);
                     break;
             }
         }
