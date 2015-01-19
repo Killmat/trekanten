@@ -43,6 +43,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.consoleOut = new System.Windows.Forms.TextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.button2 = new System.Windows.Forms.Button();
+            this.storeAudregn = new System.Windows.Forms.TextBox();
+            this.storeBudregn = new System.Windows.Forms.TextBox();
+            this.storeCudregn = new System.Windows.Forms.TextBox();
+            this.lilleAudregn = new System.Windows.Forms.TextBox();
+            this.lilleBudregn = new System.Windows.Forms.TextBox();
+            this.lilleCudregn = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,6 +59,7 @@
             this.storeA.Name = "storeA";
             this.storeA.Size = new System.Drawing.Size(100, 20);
             this.storeA.TabIndex = 0;
+            this.storeA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
             // 
             // storeB
             // 
@@ -59,6 +67,7 @@
             this.storeB.Name = "storeB";
             this.storeB.Size = new System.Drawing.Size(100, 20);
             this.storeB.TabIndex = 1;
+            this.storeB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
             // 
             // storeC
             // 
@@ -66,6 +75,7 @@
             this.storeC.Name = "storeC";
             this.storeC.Size = new System.Drawing.Size(100, 20);
             this.storeC.TabIndex = 2;
+            this.storeC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
             // 
             // lilleA
             // 
@@ -73,6 +83,7 @@
             this.lilleA.Name = "lilleA";
             this.lilleA.Size = new System.Drawing.Size(100, 20);
             this.lilleA.TabIndex = 3;
+            this.lilleA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
             // 
             // lilleB
             // 
@@ -80,6 +91,7 @@
             this.lilleB.Name = "lilleB";
             this.lilleB.Size = new System.Drawing.Size(100, 20);
             this.lilleB.TabIndex = 4;
+            this.lilleB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
             // 
             // lilleC
             // 
@@ -87,6 +99,7 @@
             this.lilleC.Name = "lilleC";
             this.lilleC.Size = new System.Drawing.Size(100, 20);
             this.lilleC.TabIndex = 5;
+            this.lilleC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnter);
             // 
             // label1
             // 
@@ -154,14 +167,14 @@
             // 
             // consoleOut
             // 
-            this.consoleOut.Location = new System.Drawing.Point(172, 90);
+            this.consoleOut.Location = new System.Drawing.Point(439, 38);
             this.consoleOut.Name = "consoleOut";
             this.consoleOut.Size = new System.Drawing.Size(100, 20);
             this.consoleOut.TabIndex = 13;
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(136, 12);
+            this.numericUpDown1.Location = new System.Drawing.Point(439, 171);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             15,
             0,
@@ -177,11 +190,70 @@
             0});
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(40, 197);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Nulstil";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // storeAudregn
+            // 
+            this.storeAudregn.Location = new System.Drawing.Point(136, 12);
+            this.storeAudregn.Name = "storeAudregn";
+            this.storeAudregn.Size = new System.Drawing.Size(239, 20);
+            this.storeAudregn.TabIndex = 16;
+            // 
+            // storeBudregn
+            // 
+            this.storeBudregn.Location = new System.Drawing.Point(136, 38);
+            this.storeBudregn.Name = "storeBudregn";
+            this.storeBudregn.Size = new System.Drawing.Size(239, 20);
+            this.storeBudregn.TabIndex = 17;
+            // 
+            // storeCudregn
+            // 
+            this.storeCudregn.Location = new System.Drawing.Point(136, 64);
+            this.storeCudregn.Name = "storeCudregn";
+            this.storeCudregn.Size = new System.Drawing.Size(239, 20);
+            this.storeCudregn.TabIndex = 18;
+            // 
+            // lilleAudregn
+            // 
+            this.lilleAudregn.Location = new System.Drawing.Point(136, 90);
+            this.lilleAudregn.Name = "lilleAudregn";
+            this.lilleAudregn.Size = new System.Drawing.Size(239, 20);
+            this.lilleAudregn.TabIndex = 19;
+            // 
+            // lilleBudregn
+            // 
+            this.lilleBudregn.Location = new System.Drawing.Point(136, 116);
+            this.lilleBudregn.Name = "lilleBudregn";
+            this.lilleBudregn.Size = new System.Drawing.Size(239, 20);
+            this.lilleBudregn.TabIndex = 20;
+            // 
+            // lilleCudregn
+            // 
+            this.lilleCudregn.Location = new System.Drawing.Point(136, 142);
+            this.lilleCudregn.Name = "lilleCudregn";
+            this.lilleCudregn.Size = new System.Drawing.Size(239, 20);
+            this.lilleCudregn.TabIndex = 21;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(551, 261);
+            this.Controls.Add(this.lilleCudregn);
+            this.Controls.Add(this.lilleBudregn);
+            this.Controls.Add(this.lilleAudregn);
+            this.Controls.Add(this.storeCudregn);
+            this.Controls.Add(this.storeBudregn);
+            this.Controls.Add(this.storeAudregn);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.consoleOut);
             this.Controls.Add(this.button1);
@@ -198,7 +270,7 @@
             this.Controls.Add(this.storeB);
             this.Controls.Add(this.storeA);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Trekantudregner";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -222,6 +294,13 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox consoleOut;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox storeAudregn;
+        private System.Windows.Forms.TextBox storeBudregn;
+        private System.Windows.Forms.TextBox storeCudregn;
+        private System.Windows.Forms.TextBox lilleAudregn;
+        private System.Windows.Forms.TextBox lilleBudregn;
+        private System.Windows.Forms.TextBox lilleCudregn;
 
     }
 }
