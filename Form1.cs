@@ -135,19 +135,62 @@ namespace trekanter
                     b = Math.Sin(B * Math.PI / 180) * c / Math.Sin(C * Math.PI / 180);
                     break;
                 case "A,a,b":
+                    B = Math.Asin((Math.Sin(A * Math.PI / 180) * b) / a) * 180 / Math.PI;
+                    C = 180 - A - B;
+                    c = Math.Sin(C * Math.PI / 180) * a / Math.Sin(A * Math.PI / 180);
                     break;
-                case "a,b,c":
-                    A = Math.Acos((b * b + c * c - a * a) / (2 * b * c)) * (180 / Math.PI);
-                    B = Math.Acos((a * a + c * c - b * b) / (2 * a * c)) * (180 / Math.PI);
-                    C = Math.Acos((a * a + b * b - c * c) / (2 * a * b)) * (180 / Math.PI);
-                    break;
-                case "C,a,b":
-                    c = Math.Sqrt(a * a + b * b - 2 * a * b * Math.Cos(C * Math.PI / 180)); 
-                    A = Math.Acos((b * b + c * c - a * a) / (2 * b * c)) * (180 / Math.PI);
-                    B = Math.Acos((a * a + c * c - b * b) / (2 * a * c)) * (180 / Math.PI);
+                case "A,a,c":
+                    C = Math.Asin((Math.Sin(A * Math.PI / 180) * c) / a) * 180 / Math.PI;
+                    B = 180 - A - C;
+                    b = Math.Sin(B * Math.PI / 180) * a / Math.Sin(A * Math.PI / 180);
                     break;
                 case "A,b,c":
                     a = Math.Sqrt(b * b + c * c - 2 * b * c * Math.Cos(A * Math.PI / 180));
+                    B = Math.Acos((a * a + c * c - b * b) / (2 * a * c)) * (180 / Math.PI);
+                    C = Math.Acos((a * a + b * b - c * c) / (2 * a * b)) * (180 / Math.PI);
+                    break;
+                case "B,C,a":
+                    C = 180 - A - B;
+                    b = Math.Sin(B * Math.PI / 180) * a / Math.Sin(A * Math.PI / 180);
+                    c = Math.Sin(C * Math.PI / 180) * a / Math.Sin(A * Math.PI / 180);
+                    break;
+                case "B,C,b":
+                    A = 180 - B - C;
+                    a = (Math.Sin(A * Math.PI / 180) * b) / Math.Sin(B * Math.PI / 180);
+                    c = (Math.Sin(C * Math.PI / 180) * b) / Math.Sin(B * Math.PI / 180);
+                    break;
+                case "B,C,c":
+                    A = 180 - B - C;
+                    a = (Math.Sin(A * Math.PI / 180) * c) / Math.Sin(C * Math.PI / 180);
+                    b = Math.Sin(B * Math.PI / 180) * c / Math.Sin(C * Math.PI / 180);
+                    break;
+                case "B,a,b":
+                    A = Math.Asin((Math.Sin(B * Math.PI / 180) * a) / b) * 180 / Math.PI;
+                    C = 180 - A - B;
+                    c = (Math.Sin(C * Math.PI / 180) * a) / Math.Sin(A * Math.PI / 180);
+                    break;
+                case "B,a,c":
+                    b = Math.Sqrt(a * a + c * c - 2 * a * c * Math.Cos(B * Math.PI / 180));
+                    A = Math.Acos((b * b + c * c - a * a) / (2 * b * c)) * (180 / Math.PI);
+                    C = Math.Acos((a * a + b * b - c * c) / (2 * a * b)) * (180 / Math.PI);
+                    break;
+                case "B,b,c":
+                    C = Math.Asin((Math.Sin(B * Math.PI / 180) * c) / b) * 180 / Math.PI;
+                    A = 180 - B - C;
+                    a = (Math.Sin(A * Math.PI / 180) * b) / Math.Sin(B * Math.PI / 180);
+                    break;
+                case "C,a,b":
+                    c = Math.Sqrt(a * a + b * b - 2 * a * b * Math.Cos(C * Math.PI / 180));
+                    A = Math.Acos((b * b + c * c - a * a) / (2 * b * c)) * (180 / Math.PI);
+                    B = Math.Acos((a * a + c * c - b * b) / (2 * a * c)) * (180 / Math.PI);
+                    break;
+                case "C,a,c":
+                    A = Math.Asin((Math.Sin(C * Math.PI / 180) * a) / c) * 180 / Math.PI;
+                    B = 180 - A - C;
+                    b = Math.Sin(B * Math.PI / 180) * a / Math.Sin(A * Math.PI / 180);
+                    break;
+                case "a,b,c":
+                    A = Math.Acos((b * b + c * c - a * a) / (2 * b * c)) * (180 / Math.PI);
                     B = Math.Acos((a * a + c * c - b * b) / (2 * a * c)) * (180 / Math.PI);
                     C = Math.Acos((a * a + b * b - c * c) / (2 * a * b)) * (180 / Math.PI);
                     break;
@@ -161,9 +204,9 @@ namespace trekanter
             storeAudregn.Text = String.Format("cos^-1(({0}^2+{1}^2-{2}^2)/(2*{0}*{1}))", Math.Round(b, (int)numericUpDown1.Value), Math.Round(c, (int)numericUpDown1.Value), Math.Round(a, (int)numericUpDown1.Value));
             storeBudregn.Text = String.Format("cos^-1(({0}^2+{1}^2-{2}^2)/(2*{0}*{1}))", Math.Round(a, (int)numericUpDown1.Value), Math.Round(c, (int)numericUpDown1.Value), Math.Round(b, (int)numericUpDown1.Value));
             storeCudregn.Text = String.Format("cos^-1(({0}^2+{1}^2-{2}^2)/(2*{0}*{1}))", Math.Round(a, (int)numericUpDown1.Value), Math.Round(b, (int)numericUpDown1.Value), Math.Round(c, (int)numericUpDown1.Value));
-            lilleAudregn.Text = String.Format("√{0}^2+{1}^2-2*{0}*{1}*cos({2})", Math.Round(b, (int)numericUpDown1.Value), Math.Round(c, (int)numericUpDown1.Value), Math.Round(A, (int)numericUpDown1.Value));
-            lilleBudregn.Text = String.Format("√{0}^2+{1}^2-2*{0}*{1}*cos({2})", Math.Round(a, (int)numericUpDown1.Value), Math.Round(c, (int)numericUpDown1.Value), Math.Round(B, (int)numericUpDown1.Value));
-            lilleCudregn.Text = String.Format("√{0}^2+{1}^2-2*{0}*{1}*cos({2})", Math.Round(a, (int)numericUpDown1.Value), Math.Round(b, (int)numericUpDown1.Value), Math.Round(C, (int)numericUpDown1.Value));
+            lilleAudregn.Text = String.Format("√({0}^2+{1}^2-2*{0}*{1}*cos({2}))", Math.Round(b, (int)numericUpDown1.Value), Math.Round(c, (int)numericUpDown1.Value), Math.Round(A, (int)numericUpDown1.Value));
+            lilleBudregn.Text = String.Format("√({0}^2+{1}^2-2*{0}*{1}*cos({2}))", Math.Round(a, (int)numericUpDown1.Value), Math.Round(c, (int)numericUpDown1.Value), Math.Round(B, (int)numericUpDown1.Value));
+            lilleCudregn.Text = String.Format("√({0}^2+{1}^2-2*{0}*{1}*cos({2}))", Math.Round(a, (int)numericUpDown1.Value), Math.Round(b, (int)numericUpDown1.Value), Math.Round(C, (int)numericUpDown1.Value));
         }
             
         private void button1_Click(object sender, EventArgs e)
