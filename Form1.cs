@@ -106,7 +106,7 @@ namespace trekanter
             {
                 case "A,B,a":
                     C = 180 - A - B;
-                    b = a * (Math.Sin(B * Math.PI / 180) / Math.Sin(A * Math.PI / 180));
+                    b = a * Math.Cos(C * Math.PI / 180);
                     c = a * (Math.Sin(C * Math.PI / 180) / Math.Sin(A * Math.PI / 180));
                     break;
                 case "A,B,b":
